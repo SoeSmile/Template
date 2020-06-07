@@ -1,0 +1,12 @@
+prod_name,prod_price,prod_brand,prod_bump,prod_path
+"Test 1",100,,1,hello
+"Test 2",110,,hello
+"Test 3",120,,hello
+"Test 4",130,
+"Test 5",1000,
+"Test 6",300,
+"Test 7",200,
+"Test 8",210,
+"Test 9",220,
+"Test 10",230,
+"Test 1",240,
