@@ -3,8 +3,16 @@ declare(strict_types=1);
 
 namespace App\Closure;
 
+/**
+ * Class Builder
+ * @package App\Closure
+ */
 class Builder
 {
+    /**
+     * @param mixed ...$data
+     * @return $this
+     */
     public function query(...$data): self
     {
         foreach ($data as $item) {
@@ -18,6 +26,10 @@ class Builder
         return $this;
     }
 
+    /**
+     * @param string $str
+     * @return $this
+     */
     public function where(string $str): self
     {
         echo 'STR = ' . $str . '<br>';

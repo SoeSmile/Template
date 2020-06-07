@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-$obj = new \App\Closure\Builder();
+use App\Closure\Builder;
+
+$obj = new Builder();
 
 $obj->query('Builder', static function ($q){
     $q->query('Run')
