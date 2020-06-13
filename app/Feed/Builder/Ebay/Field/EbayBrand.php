@@ -12,23 +12,10 @@ use App\Feed\Builder\AbstractField;
 final class EbayBrand extends AbstractField
 {
     /**
-     * EbayBrand constructor.
-     * @param array $item
-     */
-    public function __construct(array $item)
-    {
-        if ($item['id'] % 2) {
-            $this->show = false;
-        }
-
-        parent::__construct($item);
-    }
-
-    /**
      * @return string
      */
     public function getField(): string
     {
-        return '';
+        return isset($this->item['brand']) ? (string)$this->item['brand'] : '';
     }
 }

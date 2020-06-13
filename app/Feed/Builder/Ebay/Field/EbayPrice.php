@@ -10,6 +10,6 @@ final class EbayPrice extends AbstractField
 
     public function getField(): string
     {
-        return $this->item['price'] ? (string)$this->item['price'] : '';
+        return isset($this->item['price']) ? (string)$this->item['price'] : '';
     }
 }

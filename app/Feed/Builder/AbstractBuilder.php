@@ -20,6 +20,11 @@ abstract class AbstractBuilder
     protected array $fields = [];
 
     /**
+     * @var bool
+     */
+    protected bool $validate = true;
+
+    /**
      * AbstractBuilder constructor.
      * @param array $data
      */
@@ -43,7 +48,9 @@ abstract class AbstractBuilder
     {
         foreach ($data as $item) {
 
-            $this->data[] = $this->makeField($item);
+            if ($this->validate) {
+                $this->data[] = $this->makeField($item);
+            }
         }
     }
 
@@ -69,7 +76,7 @@ abstract class AbstractBuilder
 
             if (isset($data[$class])) {
 
-                $array[$key] = \is_string($data[$class]) ? $data[$class] : '';
+                $array[$key] = (string)$data[$class];
             }
         }
 
