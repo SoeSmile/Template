@@ -6,4 +6,4 @@ ini_set('display_errors', '1');
 
 require __DIR__ . './../vendor/autoload.php';
 
-include __DIR__ . './../app/Feed/index.php';
+include __DIR__ . './../app/Generator/index.php';

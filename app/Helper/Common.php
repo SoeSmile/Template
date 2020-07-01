@@ -10,9 +10,9 @@ namespace App\Helper;
 class Common
 {
     /**
-     * @var
+     * @var float
      */
-    private $time;
+    private float $time;
 
     /**
      * @param string $str
@@ -40,9 +40,9 @@ class Common
     }
 
     /**
-     * @return float|string
+     * @return float
      */
-    public function end()
+    public function end(): float
     {
         $end = \microtime(true);
 
